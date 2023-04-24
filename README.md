@@ -1,4 +1,12 @@
+### 安装
+
+```shell
+npm i ztz-monitor
+```
+
 ### 使用方法
+
+```js
 import Monitor, { reportTracker, setUserId } from "ztz-monitor"
 
 new Monitor({
@@ -9,18 +17,28 @@ new Monitor({
   jsError: true, //是否开启错误捕获上报
   performanceTracker: true //是否开启性能指标上报
 })
+```
 
 ### reportTracker用于手动上报
 
-reportTracker(data,type) data上传的数据 type上传的类型 类型分为 "Mouse Event" | "UV" | "PV" | "Error" | "Performance"
+reportTracker(data,type) data上传的数据 type上传的类型 
+
+类型分为 "Mouse Event" | "UV" | "PV" | "Error" | "Performance"
 
 ### 点击事件上报方式
 
-① 组件库支持属性透传时可使用 <Button tracker-key="tracker001">点击我自动上传埋点</Button>
+① 组件库支持属性透传时可使用 
+
+```js
+<Button tracker-key="tracker001">点击我自动上传埋点</Button>
+```
 
 目前已知不支持属性透传的组件库 vant
 
-② 组件库不支持属性透传时可使用 reportTracker手动上报 <Button onClick={selfTracker}>点击我手动上传埋点</Button>
+② 组件库不支持属性透传时可使用 reportTracker手动上报 
+
+```js
+  <Button onClick={selfTracker}>点击我手动上传埋点</Button>
 
   const selfTracker = () => {
     reportTracker(
@@ -31,7 +49,10 @@ reportTracker(data,type) data上传的数据 type上传的类型 类型分为 "M
       "Mouse Event"
     )
   }
+```
 
 ### setUserId使用时机
+
 ① 如果用户未注册，可以在注册成功时设置
+
 ② 如果用户已注册，可以在登录时设置
