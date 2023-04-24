@@ -31,3 +31,7 @@ reportTracker(data,type) data上传的数据 type上传的类型 类型分为 "M
       "Mouse Event"
     )
   }
+
+### setUserId使用时机
+① 如果用户未注册，可以在注册成功时设置
+② 如果用户已注册，可以在登录时设置
