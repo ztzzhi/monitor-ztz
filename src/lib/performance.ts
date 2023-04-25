@@ -29,7 +29,9 @@ class ztzCollection {
   }
   onLoad() {
     window.onload = () => {
-      this.getPerformance();
+      setTimeout(() => {
+        this.getPerformance();
+      }, 1000);
     };
   }
 

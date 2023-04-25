@@ -1,8 +1,12 @@
 ### 安装
 
+方式一：推荐✨✨✨✨✨
 ```shell
 npm i monitor-ztz
 ```
+
+方式二：
+npm run build后生成dist包，直接在项目中引入dist包下的index.js即可
 
 ### 使用方法
 

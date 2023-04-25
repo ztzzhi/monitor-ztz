@@ -1,13 +1,13 @@
 {
   "name": "monitor-ztz",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Frontend monitoring",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "browser": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:ztzzhi/ztz-monitor.git"
+    "url": "git@github.com:ztzzhi/monitor-ztz.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
