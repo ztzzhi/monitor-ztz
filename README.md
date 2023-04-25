@@ -1,13 +1,13 @@
 ### 安装
 
 ```shell
-npm i ztz-monitor
+npm i monitor-ztz
 ```
 
 ### 使用方法
 
 ```js
-import Monitor, { reportTracker, setUserId } from "ztz-monitor"
+import Monitor, { reportTracker, setUserId } from "monitor-ztz"
 
 new Monitor({
   appId: "你的项目id，用于区分项目",
