@@ -6,7 +6,9 @@ export const listenDom = () => {
   mouseEventArr.forEach((event) => {
     _window.addEventListener(event, (e: Event) => {
       const target = e.target as HTMLElement;
-      const trackerKey = target.getAttribute("tracker-key");
+      const trackerKey =
+        target.getAttribute("tracker-key") ||
+        target.offsetParent?.getAttribute("tracker-key");
       // 上报PV数据
       if (trackerKey) {
         reportTracker(

@@ -17,7 +17,6 @@ export default [{
       format: "cjs"
     },
     {
-      input: "./src/core/index.ts",
       file: path.resolve(__dirname, './dist/index.js'),
       format: "umd",
       name: "tracker"
