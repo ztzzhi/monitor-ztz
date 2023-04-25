@@ -107,4 +107,5 @@ class Monitor {
 }
 
 _window.Monitor = Monitor;
-export { Monitor as default, reportTracker, setUserId };
+export default Monitor
+export {reportTracker,setUserId}

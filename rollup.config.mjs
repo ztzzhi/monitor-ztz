@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default [{
-  input: "./src/core/index.ts",
+  input: "./src/lib/index.ts",
   output: [
     {
       file: path.resolve(__dirname, './dist/index.esm.js'),
@@ -19,7 +19,7 @@ export default [{
     {
       file: path.resolve(__dirname, './dist/index.js'),
       format: "umd",
-      name: "tracker"
+      name: "Monitor"
     }
   ],
   plugins: [
@@ -27,7 +27,7 @@ export default [{
   ],
 }, {
   // 自动生成声明文件
-  input: "./src/core/index.ts",
+  input: "./src/lib/index.ts",
   output: {
     file: path.resolve(__dirname, './dist/index.d.ts'),
     format: "es"
