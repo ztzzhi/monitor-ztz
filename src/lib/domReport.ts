@@ -15,7 +15,7 @@ export const listenDom = () => {
           {
             event,
             trackerKey,
-            target,
+            targetType:target.tagName,
           },
           "Mouse Event"
         );
