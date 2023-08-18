@@ -69,6 +69,7 @@ class Monitor {
     ["hashchange", "pushState", "replaceState", "popstate"].forEach((item) => {
       _window.addEventListener(item, (event: Event) => {
         let currentPage = _window.location.href;
+        let prePage = this.currentPage;
         if (currentPage === this.currentPage) return;
         this.currentPage = currentPage;
         let stayTime = this.calcStayTime() / 1000;
@@ -80,6 +81,7 @@ class Monitor {
               {
                 stayTime,
                 currentPage,
+                prePage,
                 userId: _window.Monitor._userId_,
               },
               "UV"
@@ -90,6 +92,7 @@ class Monitor {
               {
                 stayTime,
                 currentPage,
+                prePage
               },
               "PV"
             );
@@ -107,5 +110,5 @@ class Monitor {
 }
 
 _window.Monitor = Monitor;
-export default Monitor
-export {reportTracker,setUserId}
+export default Monitor;
+export { reportTracker, setUserId };
