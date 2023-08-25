@@ -16,7 +16,9 @@ export const reportTracker = <T>(data: T, type?: IType) => {
     // 支持sendBeacon的浏览器
     navigator.sendBeacon(
       _window.Monitor._requestUrl_,
-      new Blob([JSON.stringify(params)])
+      new Blob([JSON.stringify(params)], {
+        type: "application/json; charset=UTF-8",
+      })
     );
   } else {
     // 不支持sendBeacon的浏览器
